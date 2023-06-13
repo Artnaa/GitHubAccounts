@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+}
+.searchsection {
+  background-color: #141d2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.searchsection main {
+  width: 700px;
+  position: relative;
+}
+.searchsection main .searchingName .serachInput {
+  width: 100%;
+  min-height: 50px;
+  box-sizing: border-box;
+  background-color: #1e2a47;
+  color: white;
+  font-size: large;
+  -webkit-box-shadow: 5px 10px 8px 1px rgba(0, 0, 0, 0.66);
+  box-shadow: 5px 10px 8px 1px rgba(0, 0, 0, 0.66);
+  border-radius: 6px;
+  padding: 18px 0;
+  padding-left: 20px;
+}
+.searchsection main .searchingName .serachInput::placeholder {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.319);
+}
+.searchsection main .searchingName button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0079ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: medium;
+}
+.searchsection main .searchData {
+  color: white;
+  -webkit-box-shadow: 5px 10px 8px 1px rgba(0, 0, 0, 0.66);
+  box-shadow: 5px 10px 8px 1px rgba(0, 0, 0, 0.66);
+  border-radius: 6px;
+  background-color: #1e2a47;
+  box-sizing: border-box;
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.searchsection main .searchData .userProfile {
+  padding: 40px 0 0 20px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.searchsection main .searchData .userProfile img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.searchsection main .searchData .userProfile .aboutUser {
+  padding-right: 20px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.searchsection main .searchData .userProfile .aboutUser h1 {
+  display: block;
+  text-align: center;
+  margin: 0;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.searchsection main .searchData .userProfile .aboutUser h1::first-letter {
+  text-transform: uppercase;
+}
+.searchsection main .searchData .userProfile .aboutUser a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  min-width: 130px;
+  width: 100%;
+  color: #0079ff;
+}
+.searchsection main .searchData .userProfile .aboutUser a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: #f2f2f2;
+}
+.searchsection main .searchData .usersactivity {
+  padding: 5px 0;
+  width: 50%;
+  margin-top: -25px;
+  margin-left: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #141d2f;
+  border-radius: 20px;
+}
+.searchsection main .searchData .usersactivity .box {
+  width: 100%;
+  text-align: center;
+  padding: 18px;
+  font-size: larger;
+}
+.searchsection main .searchData .usersactivity :nth-child(1) {
+  border-right: 0.6px solid rgba(255, 255, 255, 0.311);
+  border-right-style: dashed;
+}
+.searchsection main .searchData .usersactivity :nth-child(2) {
+  border-right: 0.6px solid rgba(255, 255, 255, 0.311);
+  border-right-style: dashed;
+}
+.searchsection main .searchData .usersSocialMedia {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #f1f1f1af;
+}
+.searchsection main .searchData .usersSocialMedia .location {
+  display: flex;
+  align-items: center;
+}
+.searchsection main .searchData .usersSocialMedia .social {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+.searchsection main .searchData .usersSocialMedia .icon {
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+}
+.searchsection main .searchData.active {
+  opacity: 1;
+  /* При добавлении класса "active" блок становится видимым */
+  visibility: visible;
+}
