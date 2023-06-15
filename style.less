@@ -153,7 +153,6 @@ body {
       }
 
       .usersSocialMedia {
-        border: 1px solid white;
         display: flex;
         align-items: center;
         margin-top: 20px;
@@ -193,8 +192,8 @@ body {
   .pop_up {
     min-height: 200px;
     width: 100%;
-    border: 3px solid white;
     border-radius: 30px;
+    border-bottom: .4px solid snow;
     box-shadow: @boxshodow;
     background-color: #1e2a47;
     justify-content: center;
@@ -209,29 +208,37 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+
 
       span {
         font-size: 30px;
-        color:white;
+        color: white;
         margin-bottom: 20px;
       }
 
-      .closeIconButton{
+      .closeIconButton {
 
         background-color: #0079ff;
         padding: 10px 50px;
         border-radius: 8px;
         color: #fff;
         font-size: medium;
+
+
       }
-      
+
+      &.active {
+        display: none;
+      }
+
 
     }
 
-    &.active{
+    &.active {
       display: flex;
 
     }
+
+
   }
 }

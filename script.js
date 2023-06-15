@@ -14,6 +14,7 @@ const locationOfUsers = document.getElementById('userslocation')
 const socialOfUser = document.getElementById('socialtwitter')
 const dataAnswer = document.getElementById('usersinformation')
 const popUpwindow = document.getElementById('pop_up_window')
+const closePopUpWindow = document.getElementById('closePopUpButton')
 console.log(dataAnswer);
 
 
@@ -35,7 +36,10 @@ FetchApi.prototype.get = async function () {
 
 searchButton.addEventListener('click', () => {  /// на кнопку вещаем функцию который заменит конец нагешго API2 на имя user и поставит в конец url
   const searchName = nameInput.value.trim(); //берем то что написано в input
-
+  console.log(searchName);
+  if (searchName === '') {
+    alert("you didn't write anything for the search")
+   }
 
   if (searchName) {
     const searchUrl = `${API2}/${searchName}`;
@@ -45,7 +49,7 @@ searchButton.addEventListener('click', () => {  /// на кнопку вещае
       .then((data) => {
         console.log(data);
         if (data.message === 'Not Found') {
-          
+
           dataAnswer.classList.remove('active')
           popUpwindow.classList.add('active')
 
@@ -68,7 +72,7 @@ searchButton.addEventListener('click', () => {  /// на кнопку вещае
 
 
           profilePhoto.src = avatarPhoto;
-          profileLink.innerHTML = '@' + userLogin ;
+          profileLink.innerHTML = '@' + userLogin;
           profileLink.href = linkOfGitHubProfile;
           name.innerHTML = userName;
           numbOFrepos.innerHTML = "Repos" + '<br>' + repositores;
@@ -93,5 +97,16 @@ searchButton.addEventListener('click', () => {  /// на кнопку вещае
       .catch(error => {
         console.log('Ошибка при получении данных пользователя:', error);
       });
+
+  }
+});
+
+closePopUpButton.addEventListener('click', function closewindow() {
+  popUpwindow.classList.toggle('active')
+})
+nameInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault(); // Предотвращаем стандартное действие формы (например, отправку данных)
+    searchButton.click(); // Вызываем событие click на searchButton
   }
 });

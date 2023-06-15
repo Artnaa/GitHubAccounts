@@ -122,7 +122,6 @@ body {
   border-right-style: dashed;
 }
 .searchsection main .searchData .usersSocialMedia {
-  border: 1px solid white;
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -151,8 +150,8 @@ body {
 .searchsection .pop_up {
   min-height: 200px;
   width: 100%;
-  border: 3px solid white;
   border-radius: 30px;
+  border-bottom: 0.4px solid snow;
   box-shadow: 5px 10px 8px 1px rgba(0, 0, 0, 0.66);
   background-color: #1e2a47;
   justify-content: center;
@@ -177,6 +176,9 @@ body {
   border-radius: 8px;
   color: #fff;
   font-size: medium;
+}
+.searchsection .pop_up .pop_up_content.active {
+  display: none;
 }
 .searchsection .pop_up.active {
   display: flex;
