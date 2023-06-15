@@ -14,6 +14,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0 auto;
+  position: relative;
 
   main {
     width: 700px;
@@ -34,7 +35,7 @@ body {
         padding: 18px 0;
         padding-left: 20px;
 
-        &::placeholder{
+        &::placeholder {
           font-size: 20px;
           color: rgba(255, 255, 255, 0.319);
         }
@@ -62,7 +63,6 @@ body {
       margin-top: 20px;
       width: 100%;
       height: 400px;
-      // display: none;
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -187,6 +187,51 @@ body {
         /* При добавлении класса "active" блок становится видимым */
         visibility: visible;
       }
+    }
+  }
+
+  .pop_up {
+    min-height: 200px;
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 30px;
+    box-shadow: @boxshodow;
+    background-color: #1e2a47;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    display: none;
+
+
+
+    .pop_up_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+
+      span {
+        font-size: 30px;
+        color:white;
+        margin-bottom: 20px;
+      }
+
+      .closeIconButton{
+
+        background-color: #0079ff;
+        padding: 10px 50px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: medium;
+      }
+      
+
+    }
+
+    &.active{
+      display: flex;
+
     }
   }
 }

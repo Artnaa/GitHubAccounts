@@ -13,6 +13,7 @@ const numOffFollowing = document.getElementById('following')
 const locationOfUsers = document.getElementById('userslocation')
 const socialOfUser = document.getElementById('socialtwitter')
 const dataAnswer = document.getElementById('usersinformation')
+const popUpwindow = document.getElementById('pop_up_window')
 console.log(dataAnswer);
 
 
@@ -46,12 +47,15 @@ searchButton.addEventListener('click', () => {  /// на кнопку вещае
         if (data.message === 'Not Found') {
           
           dataAnswer.classList.remove('active')
+          popUpwindow.classList.add('active')
+
 
         }
 
 
         else {
           dataAnswer.classList.add('active')
+          popUpwindow.classList.remove('active')
           const userName = data.name;
           const userLogin = data.login
           const avatarPhoto = data.avatar_url;
